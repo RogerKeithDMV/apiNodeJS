@@ -1,0 +1,22 @@
+{
+  "title": "ApiClient",
+  "description": "Get the json response of an api service.",
+  "docsUrl": "",
+  "buildType": "docker",
+  "credentials": {
+    "fields": {}
+  },
+  "triggers": {
+    "apiclientnodejs": {
+      "title": "Get the json response of an api service.",
+      "main": "./lib/triggers/processTrigger.js"
+    }
+  },
+  "actions": {
+    "getDataAction": {
+      "title": "Send information to another proccess",
+      "main": "./lib/actions/testAction.js"
+    }
+  }
+}
+
