@@ -18,6 +18,12 @@ COPY . /usr/src/app
 RUN chown -R node:node .
 RUN chmod +x ./start.sh
 
+#For local
+ENV URI_RABBITMQ='amqp://guest:guest@rabbitmq-service.oih-dev-ns.svc.cluster.local'
+
+#Nexgen
+#ENV URI_RABBITMQ='amqp://guest:guest@rabbitmq-service.oih.svc.cluster.local'
+
 USER node
 
 ENTRYPOINT ["./start.sh"]
